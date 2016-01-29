@@ -2,9 +2,9 @@ from __future__ import unicode_literals
 
 from collections import Counter
 
-from storj-kademlia.log import Logger
-from storj-kademlia.utils import deferredDict
-from storj-kademlia.node import Node, NodeHeap
+from storjkademlia.log import Logger
+from storjkademlia.utils import deferredDict
+from storjkademlia.node import Node, NodeHeap
 
 
 class SpiderCrawl(object):

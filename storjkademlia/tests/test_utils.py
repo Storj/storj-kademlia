@@ -2,7 +2,7 @@ import hashlib
 
 from twisted.trial import unittest
 
-from storj-kademlia.utils import digest, sharedPrefix, OrderedSet
+from storjkademlia.utils import digest, sharedPrefix, OrderedSet
 
 
 class UtilsTest(unittest.TestCase):

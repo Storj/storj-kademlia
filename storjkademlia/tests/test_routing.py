@@ -1,7 +1,7 @@
 from twisted.trial import unittest
 
-from storj-kademlia.routing import KBucket
-from storj-kademlia.tests.utils import mknode, FakeProtocol
+from storjkademlia.routing import KBucket
+from storjkademlia.tests.utils import mknode, FakeProtocol
 
 
 class KBucketTest(unittest.TestCase):

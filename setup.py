@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 from kademlia import version
 
 setup(
-    name="storj-kademlia",
+    name="storjkademlia",
     version=version,
     description=("Kademlia is a distributed hash table for "
                  "decentralized peer-to-peer computer networks."),
@@ -12,7 +12,7 @@ setup(
     author_email="bamuller@gmail.com",
     license="MIT",
     test_suite="kademlia.tests",
-    url="https://github.com/Storj/storj-kademlia",
+    url="https://github.com/Storj/storjkademlia",
     packages=find_packages(),
     install_requires=open("requirements.txt").readlines(),
     tests_require=open("test_requirements.txt").readlines(),

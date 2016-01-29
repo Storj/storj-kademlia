@@ -5,8 +5,8 @@ from past.builtins import long
 
 from twisted.trial import unittest
 
-from storj-kademlia.node import Node, NodeHeap
-from storj-kademlia.tests.utils import mknode
+from storjkademlia.node import Node, NodeHeap
+from storjkademlia.tests.utils import mknode
 
 
 class NodeTest(unittest.TestCase):

@@ -5,7 +5,7 @@ import time
 import operator
 from collections import OrderedDict
 from future.utils import implements_iterator
-from storj-kademlia.utils import OrderedSet, sharedPrefix
+from storjkademlia.utils import OrderedSet, sharedPrefix
 
 
 class KBucket(object):

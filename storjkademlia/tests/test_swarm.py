@@ -3,7 +3,7 @@ import time
 import random
 import threading
 from twisted.trial import unittest
-from storj-kademlia.network import Server
+from storjkademlia.network import Server
 
 
 PORT = 8468

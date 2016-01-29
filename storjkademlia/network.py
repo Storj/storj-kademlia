@@ -10,13 +10,13 @@ import pickle
 from twisted.internet.task import LoopingCall
 from twisted.internet import defer, reactor, task
 
-from storj-kademlia.log import Logger
-from storj-kademlia.protocol import KademliaProtocol
-from storj-kademlia.utils import deferredDict, digest
-from storj-kademlia.storage import ForgetfulStorage
-from storj-kademlia.node import Node
-from storj-kademlia.crawling import ValueSpiderCrawl
-from storj-kademlia.crawling import NodeSpiderCrawl
+from storjkademlia.log import Logger
+from storjkademlia.protocol import KademliaProtocol
+from storjkademlia.utils import deferredDict, digest
+from storjkademlia.storage import ForgetfulStorage
+from storjkademlia.node import Node
+from storjkademlia.crawling import ValueSpiderCrawl
+from storjkademlia.crawling import NodeSpiderCrawl
 
 
 class Server(object):
