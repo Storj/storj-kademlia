@@ -7,8 +7,8 @@ import hashlib
 import binascii
 from struct import pack
 
-from kademlia.node import Node
-from kademlia.routing import RoutingTable
+from storj-kademlia.node import Node
+from storj-kademlia.routing import RoutingTable
 
 
 def mknode(id=None, ip=None, port=None, intid=None):

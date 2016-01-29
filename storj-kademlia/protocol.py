@@ -6,12 +6,12 @@ from past.builtins import long
 
 from twisted.internet import defer
 
-from rpcudp.protocol import RPCProtocol
+from storj-rpcudp.protocol import RPCProtocol
 
-from kademlia.node import Node
-from kademlia.routing import RoutingTable
-from kademlia.log import Logger
-from kademlia.utils import digest
+from storj-kademlia.node import Node
+from storj-kademlia.routing import RoutingTable
+from storj-kademlia.log import Logger
+from storj-kademlia.utils import digest
 
 
 class KademliaProtocol(RPCProtocol):

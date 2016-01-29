@@ -10,8 +10,8 @@ from twisted.web.resource import NoResource
 
 import sys, os
 sys.path.append(os.path.dirname(__file__))
-from kademlia.network import Server
-from kademlia import log
+from storj-kademlia.network import Server
+from storj-kademlia import log
 
 application = service.Application("kademlia")
 application.setComponent(ILogObserver, log.FileLogObserver(sys.stdout, log.INFO).emit)

@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from twisted.internet import reactor
 from twisted.python import log
-from kademlia.network import Server
+from storj-kademlia.network import Server
 
 log.startLogging(sys.stdout)
 

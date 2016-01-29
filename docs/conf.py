@@ -58,8 +58,8 @@ copyright = u'2015, Brian Muller'
 #
 # The short X.Y version.
 sys.path.insert(0, os.path.abspath('..'))
-import kademlia
-version = kademlia.version
+import storj-kademlia
+version = storj-kademlia.version
 # The full version, including alpha/beta/rc tags.
 release = version
 
