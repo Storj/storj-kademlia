@@ -7,10 +7,11 @@ from past.builtins import long
 
 
 class Node:
-    def __init__(self, id, ip=None, port=None):
+    def __init__(self, id, ip=None, port=None, can_test=0):
         self.id = id
         self.ip = ip
         self.port = port
+        self.can_test = can_test
         self.long_id = long(binascii.hexlify(id), 16)
 
     def sameHomeAs(self, node):
