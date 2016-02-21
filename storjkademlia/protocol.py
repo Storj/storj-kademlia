@@ -15,12 +15,12 @@ from storjkademlia.utils import digest
 
 
 class KademliaProtocol(RPCProtocol):
-    def __init__(self, sourceNode, storage, ksize):
+    def __init__(self, sourceNode, storage, ksize, logger=None):
         RPCProtocol.__init__(self)
         self.router = RoutingTable(self, ksize, sourceNode)
         self.storage = storage
         self.sourceNode = sourceNode
-        self.log = Logger(system=self)
+        self.log = logger or Logger(system=self)
 
     def getRefreshIDs(self):
         """

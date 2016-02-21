@@ -25,7 +25,8 @@ class Server(object):
     to start listening as an active node on the network.
     """
 
-    def __init__(self, ksize=20, alpha=3, id=None, storage=None):
+    def __init__(self, ksize=20, alpha=3, id=None, storage=None,
+                 protocol=None, logger=None):
         """
         Create a server instance.  This will start listening on the given port.
 
@@ -34,13 +35,17 @@ class Server(object):
             alpha (int): The alpha parameter from the paper
             id: The id for this node on the network.
             storage: An instance that implements :interface:`~kademlia.storage.IStorage`
+            protocol: Optionally overrider default protocol.
+            logger: Optionally overrider default logger.
         """
         self.ksize = ksize
         self.alpha = alpha
-        self.log = Logger(system=self)
+        self.log = logger or Logger(system=self)
         self.storage = storage or ForgetfulStorage()
         self.node = Node(id or digest(random.getrandbits(255)))
-        self.protocol = KademliaProtocol(self.node, self.storage, ksize)
+        self.protocol = protocol or KademliaProtocol(
+            self.node, self.storage, ksize
+        )
         self.refreshLoop = LoopingCall(self.refreshTable).start(3600)
 
     def onError(self, err):
