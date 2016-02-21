@@ -41,11 +41,13 @@ class Server(object):
         self.ksize = ksize
         self.alpha = alpha
         self.log = logger or Logger(system=self)
-        self.storage = storage or ForgetfulStorage()
-        self.node = Node(id or digest(random.getrandbits(255)))
         self.protocol = protocol or KademliaProtocol(
-            self.node, self.storage, ksize
+            Node(id or digest(random.getrandbits(255))),
+            storage or ForgetfulStorage(),
+            ksize
         )
+        self.storage = self.protocol.storage
+        self.node = self.protocol.sourceNode
         self.refreshLoop = LoopingCall(self.refreshTable).start(3600)
 
     def onError(self, err):
