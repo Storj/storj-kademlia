@@ -11,7 +11,7 @@ setup(
     author="Brian Muller",
     author_email="bamuller@gmail.com",
     license="MIT",
-    test_suite="kademlia.tests",
+    test_suite="storjkademlia.tests",
     url="https://github.com/Storj/storjkademlia",
     packages=find_packages(),
     install_requires=open("requirements.txt").readlines(),
