@@ -170,7 +170,11 @@ class RPCFindResponse(object):
         """
         Did the other host actually respond?
         """
-        return self.response[0]
+        return (
+            isinstance(self.response, (list, tuple)) and  # Failure
+            len(self.response) == 2 and  # impossable state?
+            self.response[0]
+        )
 
     def hasValue(self):
         return isinstance(self.response[1], dict)
