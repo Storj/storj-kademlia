@@ -15,7 +15,7 @@ from storjkademlia.utils import digest
 
 
 class KademliaProtocol(RPCProtocol):
-    def __init__(self, sourceNode, storage, ksize, logger=None):
+    def __init__(self, sourceNode, storage, ksize=20, logger=None):
         RPCProtocol.__init__(self)
         self.router = RoutingTable(self, ksize, sourceNode)
         self.storage = storage
